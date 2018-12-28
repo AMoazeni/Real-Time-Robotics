@@ -41,7 +41,7 @@ The problem here is that you have no control over the speed of code execution, a
 
 ```python
 
-# Sense-Think-Act Infinite Loop
+# Sense-Think-Act Loop
 while True:
   
   # Measure Ultrasonic Sensor Distance
