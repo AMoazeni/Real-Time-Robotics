@@ -82,10 +82,6 @@ That's why NASA's spaceships and rovers have redundant systems built in (multipl
 </div>
 
 
-<br></br>
-<br></br>
-
-
 <div align="center">
 
 <img src="https://raw.githubusercontent.com/AMoazeni/Real-Time-Robotics/master/Jupyter%20Notebook/Images/07%20-%20Robot%20Dance.gif" width=40% height=300 alt="Robot-Dance">
