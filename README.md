@@ -75,9 +75,9 @@ That's why NASA's spaceships and rovers have redundant systems built in (multipl
 <br></br>
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/AMoazeni/Real-Time-Robotics/master/Jupyter%20Notebook/Images/05%20-%20Self%20Driving%20Car.gif" height=40% alt="Self-Driving-Car">
+<img src="https://raw.githubusercontent.com/AMoazeni/Real-Time-Robotics/master/Jupyter%20Notebook/Images/05%20-%20Self%20Driving%20Car.gif" width=40% height=300 alt="Self-Driving-Car">
 
-<img src="https://raw.githubusercontent.com/AMoazeni/Real-Time-Robotics/master/Jupyter%20Notebook/Images/06%20-%20SpaceX.gif" height=40% alt="SpaceX">
+<img src="https://raw.githubusercontent.com/AMoazeni/Real-Time-Robotics/master/Jupyter%20Notebook/Images/06%20-%20SpaceX.gif" width=40% height=300 alt="SpaceX">
 
 </div>
 
@@ -88,9 +88,9 @@ That's why NASA's spaceships and rovers have redundant systems built in (multipl
 
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/AMoazeni/Real-Time-Robotics/master/Jupyter%20Notebook/Images/07%20-%20Robot%20Dance.gif" height=40% alt="Robot-Dance">
+<img src="https://raw.githubusercontent.com/AMoazeni/Real-Time-Robotics/master/Jupyter%20Notebook/Images/07%20-%20Robot%20Dance.gif" width=40% height=300 alt="Robot-Dance">
 
-<img src="https://raw.githubusercontent.com/AMoazeni/Real-Time-Robotics/master/Jupyter%20Notebook/Images/08%20-%20Power%20Plant.gif" height=40% alt="Power-Plant">
+<img src="https://raw.githubusercontent.com/AMoazeni/Real-Time-Robotics/master/Jupyter%20Notebook/Images/08%20-%20Power%20Plant.gif" width=40% height=300 alt="Power-Plant">
 
 </div>
 
