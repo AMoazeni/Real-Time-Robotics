@@ -25,6 +25,16 @@ The problem here is that you have no control over the speed of code execution, a
 
 
 <br></br>
+<div align="center">
+
+<img src="https://raw.githubusercontent.com/AMoazeni/Real-Time-Robotics/master/Jupyter%20Notebook/Images/03%20-%20Obstacle%20Avoid.gif" width=50% alt="Obstacle-Avoid">
+
+<img src="https://raw.githubusercontent.com/AMoazeni/Real-Time-Robotics/master/Jupyter%20Notebook/Images/04%20-%20Line%20Follow.gif" width=50% alt="Line-Follow">
+
+</div>
+
+
+<br></br>
 <div align="center"><img src="https://raw.githubusercontent.com/AMoazeni/Real-Time-Robotics/master/Jupyter%20Notebook/Images/02%20-%20Sense%20Think%20Act.png" width=50% alt="Sense-Think-Act-Loop"></div>
 
 
@@ -50,17 +60,6 @@ while True:
 
 
 <br></br>
-<div align="center">
-
-<img src="https://raw.githubusercontent.com/AMoazeni/Real-Time-Robotics/master/Jupyter%20Notebook/Images/03%20-%20Obstacle%20Avoid.gif" width=40% alt="Obstacle-Avoid">
-
-<img src="https://raw.githubusercontent.com/AMoazeni/Real-Time-Robotics/master/Jupyter%20Notebook/Images/04%20-%20Line%20Follow.gif" width=40% alt="Line-Follow">
-
-</div>
-
-
-
-<br></br>
 
 # Real-Time Fault Tolerant Software Architecture
 
@@ -68,7 +67,7 @@ As Robotic systems become more sophisticated and have to deal with huge amounts 
 
 
 <br></br>
-That's why NASA's spaceships and rovers have redundant systems built in (multiple copies of the same sensors and actuators), if something breaks in space you need multiple system backups that can take over immediately. Publisher-Subscriber software architecture and Real-Time parallel execution of code becomes really important.
+That's why NASA's spaceships and rovers have redundant systems built in (multiple versions of the same sensors and actuators), if something breaks in space you need multiple system backups that can take over immediately. Tools like Publisher-Subscriber architecture and Real-Time parallel execution of code become really important.
 
 
 
