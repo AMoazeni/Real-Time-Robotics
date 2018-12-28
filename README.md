@@ -1,11 +1,6 @@
-<br></br>
-<div align="center"><img src="https://raw.githubusercontent.com/AMoazeni/Real-Time-Robotics/master/Jupyter%20Notebook/Images/01%20-%20.png" width=40% alt="Counting"></div>
-
-
-
 # Introduction
 
-Take me to the [example code]() for Real Time Robotics!
+Take me to the [Code](https://github.com/AMoazeni/Real-Time-Robotics/blob/master/Code/main.cpp) for Real Time Robotics!
 
 
 <br></br>
