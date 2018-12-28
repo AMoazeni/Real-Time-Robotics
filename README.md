@@ -54,8 +54,6 @@ while True:
 
 <img src="https://raw.githubusercontent.com/AMoazeni/Real-Time-Robotics/master/Jupyter%20Notebook/Images/03%20-%20Obstacle%20Avoid.gif" width=40% alt="Obstacle-Avoid">
 
-<span>     </span>
-
 <img src="https://raw.githubusercontent.com/AMoazeni/Real-Time-Robotics/master/Jupyter%20Notebook/Images/04%20-%20Line%20Follow.gif" width=40% alt="Line-Follow">
 
 </div>
