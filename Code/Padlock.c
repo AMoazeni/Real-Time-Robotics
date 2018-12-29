@@ -1,5 +1,5 @@
-/******************* FREE-TIME SYSTEM ********************/
-/******************** EME154 UCDAVIS *********************/
+/******************** PADLOCK QC ROBOT *********************/
+
 # include <8052.h>
 # include <stdio.h>
 # include <stdlib.h>
@@ -58,18 +58,8 @@ lcall 0x9F00
 __endasm;
 }//INITIALIZATION
 
-  void printHeaderAndMenu(){
-   clrPC();
-   printf("EME 154 Mechatronics - APOC Project\n");
-   printf("           ___   ____    _____          _   \n");                   
-   printf("    /\\   |  __ \\ / __   \\  / ____ |        |  |      \n");               
-   printf("   /  \\  | |__)  | |    |  | |    |        __  |  |   _   _ _ __    __   __ \n");
-   printf("  / /\\ \\ |  ___/| |    |  | |    |      /  _ ` |  |  |  |  | |  '_  \\ / __|/ _  \\\n");
-   printf(" / __ \\|  |      | |__|  | |    |___| (_|  |  |  |  |_| |  | _  )\\__ \\  __/\n");
-   printf("/_/  \\_\\_|      \\ ____/  \\_____\\__,_|_|  \\__   |  .__/|___/\\___|\n");
-   printf("                                                          __/  |  |             \n");
-   printf("                                                         |___/|_| \n");
-printf("****************************************\n");
+void printHeaderAndMenu(){
+clrPC();
 printf("%s\n", menuTitle);
 printf("****************************************\n\n");
 printf("1. %s\n", action1);
@@ -235,7 +225,7 @@ setCur(0,24);
 printf("Please Enter The First Lock Combination\n");
 gets(str);
 combo1 = atoi(str);
-if (combo1>39) 
+if (combo1>39)
 {
 while(combo1>39)
 {
@@ -251,7 +241,7 @@ if(initialPos==combo1) go1 = 80;
 printf("Please Enter The Second Lock Combination\n");
 gets(str);
 combo2 = atoi(str);
-if (combo2>39) 
+if (combo2>39)
 {
 while(combo2>39)
 {
@@ -259,14 +249,14 @@ printf(">> Please Enter a Lock Combination From 0 to 39\n");
 gets(str);
 combo1 = atoi(str);
 }
-}	
+}
 if(combo1>combo2) go2 = 40+40-(combo1-combo2);
 if(combo1<combo2) go2 = 40+combo2-combo1;
 if(combo1==combo2) go2 = 40;
 printf("Please Enter The Third Lock Combination\n");
 gets(str);
-combo3 = atoi(str);	
-if (combo3>39) 
+combo3 = atoi(str);
+if (combo3>39)
 {
 while(combo3>39)
 {
