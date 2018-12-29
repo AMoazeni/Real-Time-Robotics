@@ -240,7 +240,7 @@ This device was designed to test Padlocks. A stepper motor turns the dial and a 
 
 
 <br></br>
-<div align="center"><img src="https://raw.githubusercontent.com/AMoazeni/Real-Time-Robotics/master/Jupyter%20Notebook/Images/13%20-%20Padlock%20Control.png" width=70% alt="Padlock-Control"></div>
+<div align="center"><img src="https://raw.githubusercontent.com/AMoazeni/Real-Time-Robotics/master/Jupyter%20Notebook/Images/13%20-%20Padlock%20Control.png" width=80% alt="Padlock-Control"></div>
 
 
 
