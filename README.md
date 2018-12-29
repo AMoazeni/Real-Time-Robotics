@@ -18,7 +18,7 @@ Robotics is a branch of Science that combines Mechanical, Electrical, and Softwa
 
 # Simple Sense-Think-Act Loop
 
-This is the simple software architecture you find in most interactive device project tutorials like this [Line Following Robot](https://circuitdigest.com/microcontroller-projects/raspberry-pi-line-follower-robot) and [Obstacle Avoiding Robot](https://www.youtube.com/watch?v=coAmKyqGyeY). The computer measures the distance ahead and makes small adjustments to stay on track. The code is run line by line, as fast as possible.
+This is the simple software architecture you find in most interactive device project tutorials like this [Obstacle Avoiding Robot](https://www.youtube.com/watch?v=coAmKyqGyeY) and [Line Following Robot](https://circuitdigest.com/microcontroller-projects/raspberry-pi-line-follower-robot). The computer measures the distance ahead and makes small adjustments to stay on track. The code is run line by line, as fast as possible.
 
 
 <br></br>
@@ -32,7 +32,7 @@ This is the simple software architecture you find in most interactive device pro
 
 
 <br></br>
-The problem here is that you have no control over the speed of code execution, a 10MHz CPU runs ten million lines of code per second, and a 1GHz CPU runs one billion lines of code per second. This can be problematic for time-critical applications, as discussed in the next sections.
+The problem is that you have no control over the speed of code execution, a 10MHz CPU runs ten million lines of code per second, and a 1GHz CPU runs one billion lines of code per second. This can be problematic for time-critical applications, as discussed in the next sections.
 
 
 <br></br>
@@ -96,7 +96,7 @@ That's why NASA's spaceships and rovers have redundant systems built in (multipl
 
 # Publisher-Subscriber Software Architecture
 
-A good way to visualize [Pub-Sub](https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern) architecture is shown below. A piece of code can be set up as a Transmitter (Publisher), Receiver (Subscriber), or Transceiver (can both Publish and Subscribe). These pieces of code (functions) are completely independent of one another and don't know of each other's existence. The functions can however communicate if they are placed on the same channel (Topic). Functions can send each other numbers and text messages to communicate, they can also be written in any language (pthon, C++, Javascript, etc). This allows highly scalable architecture and robustness of execution since the functions are loosely coupled.
+A good way to visualize [Pub-Sub](https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern) architecture is shown below. A piece of code can be set up as a Transmitter (Publisher), Receiver (Subscriber), or Transceiver (can both Publish and Subscribe). These pieces of code (functions) are completely independent of one another and don't know of each other's existence. The functions can however communicate if they are placed on the same channel (Topic). Functions can send each other numbers and text messages to communicate, they can also be written in any language (Python, C++, Javascript, etc). This allows highly scalable architecture and robustness of execution since the functions are loosely coupled.
 
 
 <br></br>
@@ -104,7 +104,7 @@ A good way to visualize [Pub-Sub](https://en.wikipedia.org/wiki/Publish%E2%80%93
 
 
 <br></br>
-For example one function can read sensor values (Publisher), another function can process these reading and come up with an action (Subscriber-Publisher), and a third function can control the wheels (Subscriber). If a component breaks, the code running the other components will not be affected. Robot Operating System ([ROS](http://www.ros.org/)) is a popular platform that runs the Pub-Sub architecture.
+For example one function can read sensor values (Publisher), another function can process these reading and come up with an action (Subscriber-Publisher), and a third function can control the wheels (Subscriber). If a component breaks, the code running other components will not be affected. Robot Operating System ([ROS](http://www.ros.org/)) is a popular platform that runs the Pub-Sub architecture.
 
 
 
@@ -112,7 +112,7 @@ For example one function can read sensor values (Publisher), another function ca
 
 # Real-Time Computing
 
-Timing is the key difference between Real-Time systems (embedded software, high performance robotics), versus other software (web applications and personal computer operating systems). In Real-Time systems, correctness depends on both the accuracy of response, as well as the timing of that response. If a Real-Time system responds too late or misses a deadline, it has failed the Real-Time system criteria and considered incorrect. Most embedded systems run continuously when powered on, and must do a specific task robustly.
+Timing is the key difference between Real-Time systems (embedded software in high performance robotics), versus other software (web applications and personal computer operating systems). In Real-Time systems, correctness depends on both the accuracy of response, as well as the timing of that response. If a Real-Time system responds too late or misses a deadline, it has failed the Real-Time system criteria and considered incorrect. Most embedded systems run continuously when powered on, and must do a specific task robustly.
 
 
 <br></br>
@@ -173,9 +173,8 @@ Typical single core CPUs run code sequentially, but high priority Real-Time syst
 
 
 <br></br>
-- Event-Driven Interrupts: Run once, when some event happens (eg. Emergency shutoff button pressed, or Temperature threshold is passed and a fan is activated).
+- Event-Driven Interrupts: Trigger when some event happens (eg. Emergency shutoff button pressed, or Temperature threshold is passed and a fan is activated).
 
-<br></br>
 - Time-Driven Interrupts: Run continuously at a certain time interval (eg. motor position is adjusted to the correct position every 50ms)
 
 
@@ -196,15 +195,15 @@ Important Note: Make sure that your code runtime is shorter than the timer inter
 
 # Timers and Counter-Overflow
 
-Accurate time keeping is mandatory for Real-Time systems, you don't want your system time to drift after some time. Most Micro-controllers have dedicated Timer chips built in. Here is the Arduino [ATmega328P Microcontroller Datasheet](http://ww1.microchip.com/downloads/en/devicedoc/atmel-8271-8-bit-avr-microcontroller-atmega48a-48pa-88a-88pa-168a-168pa-328-328p_datasheet_complete.pdf) you need to look at the data sheet of YOUR system for configuration instructions. You've probably seen 'delay( )' functions in Arduino code, but they're not useful in Real-Time applications because they force the CPU to do nothing for a time period and clog up computation cycles. Use counter-overflow timers instead for Real-Time Applications, this keeps the main loop responsive to other inputs.
+Accurate time keeping is mandatory for Real-Time systems, you don't want your system time to drift after a while. Most Micro-controllers have dedicated Timer chips built in. Here is the Arduino [ATmega328P Microcontroller Datasheet](http://ww1.microchip.com/downloads/en/devicedoc/atmel-8271-8-bit-avr-microcontroller-atmega48a-48pa-88a-88pa-168a-168pa-328-328p_datasheet_complete.pdf) you need to look at the data sheet of YOUR system for configuration instructions. You've probably seen 'delay( )' functions in Arduino code, but they're not useful in Real-Time applications because they force the CPU to do nothing for a time period and clog up computation cycles. Use counter-overflow timers instead for Real-Time Applications, this keeps the main loop responsive to other inputs.
 
 
 <br></br>
-Timers have a built-in crystal which is an electrical device that emits pulses at a fixed frequency, when electricity is applied. One can find crystals of virtually any frequency depending on the application requirements, its frequency depends on the crystal shape and geometry. Crystals are used to synchronize machine cycles. The Arduino timer crystal features a frequency of 16MHz. So the Arduino timer chip can increment a counting variable 16 million times per second.
+Timers have a built-in crystal which is an electrical device that emits pulses at a fixed frequency when electricity is applied. One can find crystals of virtually any frequency depending on the application requirements, its frequency depends on the crystal shape and geometry. Crystals are used to synchronize machine cycles. The Arduino timer crystal features a frequency of 16MHz. So the Arduino timer chip can increment a counting variable 16 million times per second.
 
 
 <br></br>
-If you use a 16-bit timer, the timer counts up to 2^16 = 65536 before resetting back to 0 and counting up again. It adds '1' to the count every clock cycle (16MHz), when the counter overflows, a flag is activated. You can calibrate the timing of the interrupt by adjusting the stating value of the counter. GreatScott has a great [Timer Setup Tutorial](https://www.youtube.com/watch?v=IdL0_ZJ7V2s) to get you started. Sparkfun also has good videos explaining [Timer Interrupts](https://www.youtube.com/watch?v=2kr5A350H7E) and [External Interrupts](https://www.youtube.com/watch?v=J61_PKyWjxU&index=2&list=PLBcrWxTa5CS0u-rQNkGtLMg1yA7h56r6).
+If you use a 16-bit timer, the timer counts up to 2^16 = 65536 before resetting back to 0 and counting up again. It adds '1' to the count every clock cycle (16MHz), when the counter overflows, a flag is activated. You can calibrate the timing of the interrupt by adjusting the starting value of the counter. GreatScott has a great [Timer Setup Tutorial](https://www.youtube.com/watch?v=IdL0_ZJ7V2s) to get you started. Sparkfun also has good videos explaining [Timer Interrupts](https://www.youtube.com/watch?v=2kr5A350H7E) and [External Interrupts](https://www.youtube.com/watch?v=J61_PKyWjxU&index=2&list=PLBcrWxTa5CS0u-rQNkGtLMg1yA7h56r6).
 
 
 <br></br>
@@ -220,11 +219,11 @@ Here is a list of [Real-Time Operating Systems (RTOS)](https://en.wikipedia.org/
 
 
 <br></br>
-Python is great for prototyping and quick development due to its simple syntax. Julia is a new open source language designed for Engineering and technical calculations (similar to expensive and closed source MATLAB). Production level code is generally written in C, with Real-Time functions written in Assembly (hardware specific language).
+Python is great for prototyping and quick development due to its simple syntax. Julia is a new open source language designed for Engineering and technical calculations (similar to expensive and closed source MATLAB). Production level code is generally written in C, with Real-Time functions written in Assembly (hardware specific language). Python developers can use 'Cython' and 'Micro-Python' Libraries to improve their code performance.
 
 
 <br></br>
-Fastest to Slowest runtime: Assembly, c, c++, Julia (similar to MATLAB), JavaScript, Python 
+Fastest to Slowest runtime: Assembly, c, c++, Julia, Python, JavaScript
 
 
 
@@ -237,11 +236,11 @@ This device was designed to test Padlocks. A stepper motor turns the dial and a 
 
 
 <br></br>
-<div align="center"><img src="https://raw.githubusercontent.com/AMoazeni/Real-Time-Robotics/master/Jupyter%20Notebook/Images/12%20-%20Padlock%20QC.png" alt="Padlock-QC"></div>
+<div align="center"><img src="https://raw.githubusercontent.com/AMoazeni/Real-Time-Robotics/master/Jupyter%20Notebook/Images/12%20-%20Padlock%20QC.png" width=40% alt="Padlock-QC"></div>
 
 
 <br></br>
-<div align="center"><img src="https://raw.githubusercontent.com/AMoazeni/Real-Time-Robotics/master/Jupyter%20Notebook/Images/13%20-%20Padlock%20Control.png" alt="Padlock-Control"></div>
+<div align="center"><img src="https://raw.githubusercontent.com/AMoazeni/Real-Time-Robotics/master/Jupyter%20Notebook/Images/13%20-%20Padlock%20Control.png" width=70% alt="Padlock-Control"></div>
 
 
 
