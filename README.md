@@ -248,8 +248,6 @@ This device was designed to test Padlocks. A stepper motor turns the dial and a 
 
 # Code Download
 
-
-<br></br>
 ```shell
 $ git clone https://github.com/AMoazeni/Real-Time-Robotics.git
 $ cd Real-Time-Robotics
