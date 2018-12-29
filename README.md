@@ -175,7 +175,7 @@ Typical single core CPUs run code sequentially, but high priority Real-Time syst
 <br></br>
 - Event-Driven Interrupts: Trigger when some event happens (eg. Emergency shutoff button pressed, or Temperature threshold is passed and a fan is activated).
 
-- Time-Driven Interrupts: Run continuously at a certain time interval (eg. motor position is adjusted to the correct position every 50ms)
+- Time-Driven Interrupts: Run continuously at a certain time interval (eg. motor is adjusted to the correct position every 50ms)
 
 
 <br></br>
