@@ -259,7 +259,7 @@ $ cd Real-Time-Robotics
 
 # Happy Coding!
 
-Check out [AMoazeni's Github](https://github.com/AMoazeni/) for more Data Science, Machine Learning, and Robotics repositories.
+Check out [AMoazeni's Github](https://github.com/AMoazeni?tab=repositories) for more Data Science, Machine Learning, and Robotics repositories.
 
 
 <br></br>
